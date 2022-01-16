@@ -1,0 +1,111 @@
+/*==================== VARIABLES CSS ====================*/
+:root {
+  /*========== Colors ==========*/
+  --body-color: hsl(185, 75%, 39%);
+  --text-color: hsl(229, 23%, 23%);
+  --text-color-light:  hsl(0, 0%, 59%);
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Kumbh Sans', sans-serif;
+  --normal-font-size:: 1.125rem;
+  --small-font-size: .875rem;
+  --smaller-font-size: .75rem;
+  --tiny-font-size: .688rem;
+  --white-color: #FFF;
+}
+
+/*==================== BASE ====================*/
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+}
+
+/*==================== REUSABLE CSS CLASSES ====================*/
+.bg-container {
+  min-height: 100vh;
+  background:
+    url(../images/bg-pattern-top.svg),
+    url(../images/bg-pattern-bottom.svg),
+    var(--body-color);
+  background-position:
+      /* Offset img repect to the center */
+      calc(50% - 600px) calc(50% - 300px),
+      calc(50% + 600px) calc(50% + 300px); 
+  background-size: 900px; 
+  background-repeat: no-repeat;
+}
+
+/*==================== CARD PROFILE ====================*/
+/* Font and typography */
+.profile-card {
+  text-align: center;
+}
+
+.profile-card__user-name,
+.profile-card__stats-number {
+  font-size: var(--normal-font-size);
+  font-weight: 700;
+}
+.profile-card__user-age,
+.profile-card__user-location,
+.profile-card__stats-name {
+  color: var(--text-color-light);
+}
+
+.profile-card__user-location {
+  font-size: var(--small-font-size);
+}
+
+.profile-card__stats-name {
+  font-size: var(--tiny-font-size);
+}
+
+/* Profile card styles */
+.profile-card__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.profile-card {
+  width: 100%;
+  max-width: 325px;
+  background-color: var(--white-color);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.profile-card__header {
+  height: 130px;
+  background-image: url(../images/bg-pattern-card.svg);
+}
+
+.profile-card__user-info-section {
+  padding-bottom: 1rem;
+  border-bottom: .5px solid hsla(0, 0%, 59%, .5);
+}
+
+.profile-card__user-img {
+  margin: auto;
+  margin-top: -70px;
+  margin-bottom: 1rem;
+  border: .3rem solid var(--white-color);
+  border-radius: 50%;
+}
+
+.profile-card__user-name,
+.profile-card__user-age,
+.profile-card__stats-item {
+  display: inline-block;
+}
+
+.profile-card__user-name {
+  margin-right: .5em;
+  margin-bottom: .5em;
+}
+
+.profile-card__stats-item {
+  margin: 1em;
+}
